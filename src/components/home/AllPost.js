@@ -5,36 +5,50 @@ import { Link } from 'react-router-dom'
 function AllPost() {
 
     const [posts, setPosts] = useState([])
+    const [filterProduct , setFilterProduct] = useState([])
+    const [activebtn, setActiveBtn] = useState('all');
+
     useEffect(()=>{
         fetch("./data/home/posts.json")
         .then(res => res.json())
-        .then(data => setPosts(data))
+        .then(data => {
+            setPosts(data)
+            setFilterProduct(data)
+        })
     },[])
 
-    console.log(posts);
-    // const images = [
-    //     "https://picsum.photos/200/300?image=1050",
-    //     "https://picsum.photos/300/300?image=206",
-    // ]
+    console.log(filterProduct);
+    const categoryHander = (e)=> {
+        if(e === 'all'){
+            setFilterProduct(posts)
+            return
+        }
+        setActiveBtn(e)
+        const filteredproducts = posts?.filter(product => product.category === e)
+        setFilterProduct(filteredproducts)
+    }
+
+    console.log(filterProduct);
+
   return (
     <div id="all-post" className="mt-20 mb-20">
     <h2 className="text-primary font-bold text-base sm:text-[24px] text-center sm:text-left mx-6 leading-[150%]">All Posts</h2>
         <div className="catagories mx-6 mt-6 items-menu">
             <ul className="flex gap-x-6 text-text  whitespace-nowrap overflow-x-scroll text-sm sm:text-base scroll-bar">
-                <li className="px-7 py-3 btn-active cursor-pointer">All</li>
-                <li className="px-7 py-3 cursor-pointer">Career & Growth</li>
-                <li className="px-7 py-3 cursor-pointer">Process</li>
-                <li className="px-7 py-3 cursor-pointer">Product</li>
-                <li className="px-7 py-3 cursor-pointer">Design System</li>
+                <li onClick={()=> categoryHander('all')} className={`${activebtn === 'all' ? ' btn-active ':''} px-7 py-3 cursor-pointer`}>All</li>
+                <li onClick={()=> categoryHander('Career & Growth')} className={`${activebtn === 'Career & Growth' ? ' btn-active ':''}"px-7 py-3 cursor-pointer`}>Career & Growth</li>
+                <li onClick={()=> categoryHander('Process')} className={`${activebtn === 'Process' ? ' btn-active ':''} px-7 py-3 cursor-pointer`}>Process</li>
+                <li onClick={()=> categoryHander('Product')}className={`${activebtn === 'Product' ? ' btn-active ':''} px-7 py-3 cursor-pointer`}>Product</li>
+                <li onClick={()=> categoryHander('Design System')} className={`${activebtn === 'Design System' ? ' btn-active ':''} px-7 py-3 cursor-pointer`}>Design System</li>
             </ul>
         </div>
         <div className="mt-10  mx-6">
             <ResponsiveMasonry
                 columnsCountBreakPoints={{350: 1, 750: 2, 900: 3, 1200:4}}
             >
-                <Masonry>
+                <Masonry> 
                     {
-                        posts.map(post =>
+                        filterProduct?.map(post =>
                             <Link key={post.id} href="" className="items Product m-[10px]">
                                 <div className="border rounded-[10px] h-fit">
                                     <img className="w-full" src={require(`./../../assests/images/home/all-posts/${post.img}.webp`)} alt=""/>
