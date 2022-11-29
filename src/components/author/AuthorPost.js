@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 function AuthorPost() {
   const [authors, setAuthors] = useState([])
@@ -17,12 +18,14 @@ function AuthorPost() {
                 <div className="Author-article mt-10 flex justify-center flex-wrap gap-[24px] items-center mx-[5%] 2xl:[160px]">
                   {
                     authors.map (author => 
-                      <div key={author.id} className="w-[280px] mb-[24px]">
-                        <img className="w-full" src={require(`./../../assests/images/Author/${author.contentimg}.webp`)} alt=""/>
-                        <h3 className="text-text font-bold text-lg sm:text-[24px] leading-[150%] mt-2">{author.authorName}</h3>
-                        <p className="lol text-base text-text-60 font-normal leading-[24px]">{author.numberOfPost}</p>
-                        <p className="text-text-40 text-base leading-[24px] mt-2 font-light">{author.description}</p>
-                      </div>
+                      <Link key={author.id} to={`/authorDetails/${author.id}`}>
+                        <div  className="w-[280px] mb-[24px]">
+                          <img className="w-full" src={require(`./../../assests/images/Author/${author.contentimg}.webp`)} alt=""/>
+                          <h3 className="text-text font-bold text-lg sm:text-[24px] leading-[150%] mt-2">{author.authorName}</h3>
+                          <p className="lol text-base text-text-60 font-normal leading-[24px]">{author.numberOfPost}</p>
+                          <p className="text-text-40 text-base leading-[24px] mt-2 font-light">{author.description}</p>
+                        </div>
+                      </Link>
                     )
                   }
                 </div>
