@@ -1,38 +1,179 @@
-.App {
-  text-align: center;
+.nav-items {
+    height: calc(100vh - 80px);
+    width: 100vw;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.after-hide {
+    height: calc(100vh - 80px);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*===============
+ homepage
+=================*/
+
+#circle { position: relative; width: 100%; padding-bottom: 0%; overflow: hidden; }
+
+#circle text { 
+    font-size: 16px; 
+    font-weight: normal; 
+    color: green; 
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#circle svg { width: 100%; height: fit-content;
+
+  -webkit-animation-name: rotate;
+     -moz-animation-name: rotate;
+      -ms-animation-name: rotate;
+       -o-animation-name: rotate;
+          animation-name: rotate;
+  -webkit-animation-duration: 7s;
+     -moz-animation-duration: 7s;
+      -ms-animation-duration: 7s;
+       -o-animation-duration: 7s;
+          animation-duration: 7s;
+  -webkit-animation-iteration-count: infinite;
+     -moz-animation-iteration-count: infinite;
+      -ms-animation-iteration-count: infinite;
+       -o-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+     -moz-animation-timing-function: linear;
+      -ms-animation-timing-function: linear;
+       -o-animation-timing-function: linear;
+          animation-timing-function: linear;
+
 }
 
-.App-link {
-  color: #61dafb;
+@-webkit-keyframes rotate {
+    from { -webkit-transform: rotate(360deg); }
+    to { -webkit-transform: rotate(0); }
+}
+@-moz-keyframes rotate {
+    from { -moz-transform: rotate(360deg); }
+    to { -moz-transform: rotate(0); }
+}
+@-ms-keyframes rotate {
+    from { -ms-transform: rotate(360deg); }
+    to { -ms-transform: rotate(0); }
+}
+@-o-keyframes rotate {
+    from { -o-transform: rotate(360deg); }
+    to { -o-transform: rotate(0); }
+}
+@keyframes rotate {
+    from { transform: rotate(360deg); }
+    to { transform: rotate(0); }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* caurosel  */
+.swiper{
+    overflow: visible !important;
+}
+
+.swiper-button-next ,.swiper-button-prev{
+    @apply !top-[-35px] !text-black !text-[10px];
+    
+}
+.swiper-button-next, .swiper-rtl .swiper-button-prev{
+    @apply !left-auto !right-auto;
+}
+.swiper-button-next{
+    left: 500px !important;
+}
+.swiper-button-prev {
+    left: 450px !important;
+}
+.swiper-button-next::after, .swiper-button-prev::after{
+    @apply !text-[24px] !font-bold;
+}
+/* active-btn  */
+
+.btn-active {
+    position: relative;
+    @apply text-text;
+}
+
+.btn-active:after {
+    content: '';
+    @apply w-full h-[2px] bg-text bottom-0 left-0 absolute;
+}
+
+.items-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+}
+
+
+/* ==============
+membership page 
+================= */
+/* .blog-price{
+    font-weight: 900;
+} */
+
+.td-sytle {
+    @apply py-4 px-2 text-text font-bold whitespace-nowrap text-sm sm:text-base;
+}
+
+.accordion {
+    @apply border-b
+}
+
+.title {
+    @apply py-4 cursor-pointer transition-all duration-300 ease-in flex justify-between items-start sm:items-center text-base sm:text-lg md:text-[20px] font-bold;
+}
+
+.desc {
+    @apply pt-2 sm:pt-4 pb-6 text-sm md:text-base text-text-60 hidden pr-9;
+}
+
+.title span svg {
+    @apply w-4 sm:w-7 h-4 sm:h-7 mt-1 sm:mt-0;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.title.active span {
+    transform: rotate(180deg);
+}
+
+.title:hover,
+.title.active {
+    color: black;
+}
+
+.desc.active {
+    display: block;
+}
+
+/*=====================
+terms of services page 
+ ========================*/
+
+.error-part button {
+    font-family: 'Arima Madurai', cursive;
+}
+
+
+/* ======================
+terms of services page 
+=========================*/
+
+
+/* for slider  */
+.slide {
+    opacity: 1;
+    margin-top: 0px;
+    transition: all linear .3s;
+}
+
+
+.scroll-bar::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-bar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
