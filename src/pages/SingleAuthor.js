@@ -7,7 +7,6 @@ function SingleAuthor() {
     const {id} = useParams()
 
     const [authors, allsetAuthor] = useState([])
-    // const [auhtor, setAuthor] = useState([])
 
     useEffect(()=>{
         axios.get('../data/author/authorPosts.json').then((response) =>{

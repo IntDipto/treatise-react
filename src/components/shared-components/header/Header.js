@@ -72,7 +72,7 @@ function Header() {
                         <div id="nav-option">
                                 <ul className="text-[32px] md:text-[42px] lg:text-[48px] xl:text-[54px] 2xl:[64px] leading-[150%] text-nav-text flex flex-col gap-y-[24px] sm:gap-y-[38px] md:gap-y-[48px] lg:gap-y-[64px] text-center sm:text-left">
                                     <li><Link to="">Home</Link></li>
-                                    <li><Link to="">Membership</Link></li>
+                                    <li><Link to="/membership">Membership</Link></li>
                                     <li><Link to="/author">Author</Link></li>
                                 </ul>
                         </div>

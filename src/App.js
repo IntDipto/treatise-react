@@ -7,6 +7,7 @@ import NotFound from './pages/NotFound';
 import SingleBlog from './pages/SingleBlog';
 import TermsOfService from './pages/TermsOfService';
 import SingleAuthor from './pages/SingleAuthor';
+import Membership from './pages/Membership';
 
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
         },
         {
           path:'/membership',
-          element: <Home></Home>
+          element: <Membership></Membership>
         },
         {
           path:'/author',
