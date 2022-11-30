@@ -48,7 +48,7 @@ function Table() {
                     </div>
                 </th>
 
-                <th className="text-left p-6">
+                <th className="text-left p-6 bg-[#283683]/10 rounded-t-[10px]">
                     <h4 className="text-text text-base sm:text-xl leading-[150%]">Professional</h4>
                     <p className="text-text-60 text-base leading-[24px] mt-1 whitespace-nowrap">Most Favourite</p>
                 
@@ -72,8 +72,8 @@ function Table() {
 
             <tbody>
             {
-            memberTableData.map(data => 
-                <tr key={data.id} className="border-t border-text-10">
+            memberTableData.map((data,i) => 
+                <tr key={i} className="border-t border-text-10">
                 <td className="td-sytle">{data.name}</td>
                 <td>
                     <div className="flex justify-center">
@@ -105,7 +105,7 @@ function Table() {
                     }     
                     </div>
                 </td>
-                <td>
+                <td className=''>
                     <div className="flex justify-center">
                     { 
                         data.starter === 'no' ? 
@@ -120,7 +120,7 @@ function Table() {
                     }     
                     </div>
                 </td>
-                <td>
+                <td className='bg-[#283683]/10'>
                     <div className="flex justify-center">
                     {
                         data.professional === 'no' ? 

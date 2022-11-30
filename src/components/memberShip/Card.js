@@ -12,16 +12,16 @@ function Card() {
     console.log(memberTableData);
   return (
     <div>
-         <div class="flex flex-wrap justify-center gap-x-6">
+         <div className="flex flex-wrap justify-center gap-x-6">
               {
-                memberTableData.map(data => 
-                  <div class="w-[300px] py-6 px-2 rounded-[10px] border-0 sm:border mt-6 ">
-                    <h3 class="tex-base text-text text-center">{data.name}</h3>
-                    <h4 class="text-sm text-text-60 text-center mt-1">{data.title}</h4>
-                    <h5 class="text-[48px] text-text blog-price font-[900] mt-1 leading-[60px] text-center">${data.price}</h5>
-                    <div class="mt-6 flex flex-col gap-4 ">
-                        <p class="flex items-center justify-between">
-                            <span class="text-sm font-bold text-text">Regular Update</span>
+                memberTableData.map((data,i) => 
+                  <div key={i} className="w-[300px] py-6 px-2 rounded-[10px] border-0 sm:border mt-6 ">
+                    <h3 className="tex-base text-text text-center">{data.name}</h3>
+                    <h4 className="text-sm text-text-60 text-center mt-1">{data.title}</h4>
+                    <h5 className="text-[48px] text-text blog-price font-[900] mt-1 leading-[60px] text-center">${data.price}</h5>
+                    <div className="mt-6 flex flex-col gap-4 ">
+                        <p className="flex items-center justify-between">
+                            <span className="text-sm font-bold text-text">Regular Update</span>
                             <span>
                               {
                                 data.regularUpdate === 'no' ? 
@@ -37,8 +37,8 @@ function Card() {
                             </span>
                         </p>
 
-                        <p class="flex items-center justify-between">
-                            <span class="text-sm font-bold text-text">Paid Post</span>
+                        <p className="flex items-center justify-between">
+                            <span className="text-sm font-bold text-text">Paid Post</span>
                             <span>
                             {
                                 data.paidPost === 'no' ? 
@@ -54,8 +54,8 @@ function Card() {
                             </span>
                         </p>
 
-                        <p class="flex items-center justify-between">
-                            <span class="text-sm font-bold text-text">Support independent publishing</span>
+                        <p className="flex items-center justify-between">
+                            <span className="text-sm font-bold text-text">Support independent publishing</span>
                             <span>
                             {
                                 data.supportIndependentPublishing === 'no' ? 
@@ -71,8 +71,8 @@ function Card() {
                             </span>
                         </p>
 
-                        <p class="flex items-center justify-between">
-                            <span class="text-sm font-bold text-text">Q&A Session</span>
+                        <p className="flex items-center justify-between">
+                            <span className="text-sm font-bold text-text">Q&A Session</span>
                             <span>
                             {
                                 data.qaSession === 'no' ? 
@@ -88,8 +88,8 @@ function Card() {
                             </span>
                         </p>
 
-                        <p class="flex items-center justify-between">
-                            <span class="text-sm font-bold text-text">Dedicated Support</span>
+                        <p className="flex items-center justify-between">
+                            <span className="text-sm font-bold text-text">Dedicated Support</span>
                             <span>
                             {
                                 data.dedicatedSupport === 'no' ? 
@@ -105,8 +105,8 @@ function Card() {
                             </span>
                         </p>
 
-                        <div class="flex justify-center mt-6">
-                            <button class="text-text text-sm px-10 py-3 border border-text rounded-[7px]">Start Now</button>
+                        <div className="flex justify-center mt-6">
+                            <button className="text-text text-sm px-10 py-3 border border-text rounded-[7px]">Start Now</button>
                         </div>
                     </div>
                   </div>  

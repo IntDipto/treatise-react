@@ -121,11 +121,11 @@ membership page
 }
 
 .title {
-    @apply py-4 cursor-pointer transition-all duration-300 ease-in flex justify-between items-start sm:items-center text-base sm:text-lg md:text-[20px] font-bold;
+    @apply py-2 cursor-pointer transition-all duration-300 ease-in flex justify-between items-start sm:items-center text-base sm:text-lg md:text-[20px] font-bold;
 }
 
 .desc {
-    @apply pt-2 sm:pt-4 pb-6 text-sm md:text-base text-text-60 hidden pr-9;
+    @apply text-sm md:text-base text-text-60 pr-9;
 }
 
 .title span svg {
@@ -177,3 +177,44 @@ terms of services page
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
+
+
+header h1 {
+    color: #eee;
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  .faqs .faq {
+    @apply border-b;
+    padding: 15px;
+    background: transparent;
+  }
+  
+  .faqs .faq .faq-question {
+    position: relative;
+    transition: all 0.4s ease;
+  }
+  
+  
+  .faqs .faq .faq-answer {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .faqs .faq.open .faq-question {
+    margin-bottom: 15px;
+  }
+  
+  .faqs .faq.open .faq-question span {
+    transform: rotate(180deg);
+  }
+  
+  .faqs .faq.open .faq-answer {
+    max-height: 1000px;
+    opacity: 1;
+  }
+  
