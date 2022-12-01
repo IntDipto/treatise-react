@@ -23,7 +23,7 @@ function BestStories() {
             <Swiper 
             slidesPerView={1} 
             spaceBetween={30} 
-            className="mySwiper"  
+            className="mySwiper relative"  
             breakpoints= {{
                 320:{
                     slidesPerView: 1,
@@ -56,11 +56,12 @@ function BestStories() {
               }}
             navigation={true} 
             modules={[Navigation]}>
+                
                 {
                     stories.map(story => 
                         <SwiperSlide key={story.id}>
                             <Link to={`/blog/${story.id}`} className=""> 
-                                <div className="border rounded-[10px]">
+                                <div className="border rounded-[10px] relative">
                                     <img className="w-full rounded-t-[10px]" src={require(`./../../assests/images/home/best-stories/${story.img}.webp`)} alt="" srcSet=""/>
                                     <div className="p-4">
                                         <p className="flex gap-x-2 text-xs lg:text-sm">
