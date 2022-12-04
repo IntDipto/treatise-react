@@ -5,7 +5,7 @@ import img from '../../assests/images/home/editors-choice.webp'
 
 function EditorsChoice() {
   return (
-    <div className="mt-20 bg-secondary md:bg-transparent pt-6 md:pt-0">
+    <div className="mt-20 bg-secondary md:bg-transparent pt-10 md:pt-0">
             <h2 className="ml-6 text-primary font-bold text-base sm:text-[24px] text-center sm:text-left">Editors' Choice</h2>
             <Link to="">
                 <div className="mt-10 flex flex-col-reverse md:flex-row items-center sm:items-start md:items-center gap-x-6">

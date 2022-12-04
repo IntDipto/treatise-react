@@ -44,7 +44,7 @@ function AllPost() {
         </div>
         <div className="mt-10  mx-6">
             <ResponsiveMasonry
-                columnsCountBreakPoints={{350: 1, 750: 2, 900: 3, 1200:4}}
+                columnsCountBreakPoints={{350: 1, 550:2, 900: 3, 1200:4}}
             >
                 <Masonry> 
                     {

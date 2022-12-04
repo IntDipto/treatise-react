@@ -15,7 +15,7 @@ function BestStories() {
     },[])
 
   return (
-    <div className='mx-4 sm:mx-6 mt-[10px] sm:mt-[20px] relative mb-20 overflow-hidden'>
+    <div className='mx-4 sm:mx-6 mt-[10px] sm:mt-[20px] relative mb-10 sm:mb-20 overflow-hidden pb-14 sm:pb-0 '>
         <h2 className="text-base sm:text-[24px] text-primary font-bold">Get started with our best stories</h2>
         
         {/* caurosel part  */}
