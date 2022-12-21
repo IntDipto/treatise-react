@@ -1,10 +1,50 @@
 .nav-items {
-    height: calc(100vh - 80px);
+    height: calc(100vh - 87px);
     width: 100vw;
 }
 
-.after-hide {
-    height: calc(100vh - 80px);
+/* custom search bar  */
+.input-box {
+    transition: all 0.6s cubic-bezier(0.58, 0, 0.5, 1);
+}
+.input-box.open {
+    max-width: 320px;
+    margin-right: 26px !important;
+}
+.input-box input {
+    @apply relative outline-none h-full w-full rounded-[8px] text-sm;
+    margin-right: 26px !important;
+}
+.input-box.open {
+    @apply border;
+    padding: 0 0 0 50px;
+    margin-right: 26px !important;
+}
+.icon {
+    @apply absolute h-full top-0 left-0 w-[50px] rounded-[8px] flex justify-center bg-white;
+}
+.search-icon {
+    @apply absolute top-1/2 text-sm;
+    transition: all 0.4s cubic-bezier(0.58, 0, 0.12, 1);
+}
+.close-icon {
+    @apply absolute top-1/2 text-sm;
+    transition: all 0.1s cubic-bezier(0.58, 0, 0.12, 1);
+}
+.search-icon {
+    color: #5c77ff;
+    transform: translateY(-50%) rotate(90deg);
+}
+.input-box.open .search-icon {
+    transform: translateY(-50%) rotate(0);
+}
+.close-icon {
+    @apply text-white opacity-0 cursor-pointer -translate-y-1/2 -right-8;
+}
+.input-box.open .close-icon {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(-50%) rotate(180deg);
 }
 
 /*===============
@@ -108,9 +148,6 @@
 /* ==============
 membership page 
 ================= */
-/* .blog-price{
-    font-weight: 900;
-} */
 
 .td-sytle {
     @apply py-4 px-2 text-text font-bold whitespace-nowrap text-sm sm:text-base;
@@ -184,44 +221,46 @@ header h1 {
     font-size: 28px;
     font-weight: 700;
     text-transform: uppercase;
-  }
+}
   
-  .faqs .faq {
+.faqs .faq {
     @apply border-b;
     padding: 15px;
     background: transparent;
-  }
-  
-  .faqs .faq .faq-question {
+}
+
+.faqs .faq .faq-question {
     position: relative;
     transition: all 0.4s ease;
-  }
-  
-  
-  .faqs .faq .faq-answer {
+}
+
+
+.faqs .faq .faq-answer {
     opacity: 0;
     max-height: 0;
     overflow: hidden;
     transition: all 0.3s ease;
-  }
-  
-  .faqs .faq.open .faq-question {
+}
+
+.faqs .faq.open .faq-question {
     margin-bottom: 15px;
-  }
-  
-  .faqs .faq.open .faq-question span {
+}
+
+.faqs .faq.open .faq-question span {
     transform: rotate(180deg);
-  }
-  
-  .faqs .faq.open .faq-answer {
+}
+
+.faqs .faq.open .faq-answer {
     max-height: 1000px;
     opacity: 1;
-  }
+}
   
 
-
-
-  @media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
+    .nav-items {
+        height: calc(100vh - 56px);
+        width: 100%;
+    }    
     .swiper-button-next ,.swiper-button-prev{
         @apply !top-[unset] !-bottom-16 !text-black !text-[10px];
         

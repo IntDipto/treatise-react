@@ -4,17 +4,24 @@ import img from '../../../assests/images/nav-img.png'
 
 function Header() {
     const [showMenu,setShowMenu] = useState(false);
+    const [searchBar, setSearchBar] = useState(false)
+    const [searchIcon, showSearchIcon] = useState(true)
 
     const handleMenu = () =>{
         setShowMenu(!showMenu)
+        showSearchIcon(!searchIcon)
+    }
+    
+    const openSearchBar = () =>{
+        setSearchBar(!searchBar)
     }
 
   return (
-    <header id="header-nav" className="bg-[#ffffff] fixed top-0 w-full z-30">
+    <header className={`${showMenu ? 'bg-[#F2F4F7]':'bg-[#ffffff]'} fixed top-0 w-full z-30`}>
         <nav className="">
-            <div className="px-6 py-5 flex justify-between border-b border-primary items-center h-[56px] sm:h-fit ">
-                <Link to="/">
-                    <svg className="w-[101px] h-[28px] sm:w-[141px] sm:h-[40px]" width="141" height="40" viewBox="0 0 141 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div className="px-4 sm:px-6 py-5 flex justify-between border-b border-primary items-center h-[56px] sm:h-[87px]">
+                <Link className={`${searchBar ?'w-0':'w-[141px]'} transition-all duration-700 ease-out overflow-hidden`} to="/">
+                    <svg className={`${searchBar ?'w-0':'w-[101px] sm:w-[141px]'} h-[28px] sm:h-[40px] transition-all duration-700`} viewBox="0 0 141 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10.4639 22.7035C12.3479 18.1371 16.8576 13.1441 18.2326 11.6841V10.1208L17.8288 10.5292C17.5383 10.8225 12.2464 16.2103 9.77139 21.5432C9.56856 21.9808 9.38492 22.4176 9.22412 22.8515C8.78191 24.0448 8.51147 25.2142 8.51147 26.2996C8.51147 33.7787 16.9956 35.1729 17.0814 35.1857L17.7283 35.2853L16.5917 33.9943C14.7215 33.5338 9.6252 31.7769 9.6252 26.2987C9.6252 25.5276 9.7787 24.7026 10.0464 23.8483C10.104 23.661 10.4173 22.8543 10.4639 22.7035Z" fill="url(#paint0_linear_322_2)"/>
                         <path d="M4.72983 23.7259C4.72983 21.4536 5.14097 18.9247 6.92806 16.075C7.06327 14.9878 7.32549 13.9225 7.76678 12.9175C4.36529 16.7831 3.56311 20.9493 3.56311 23.725C3.56311 33.6234 12.1541 38.0755 18.2545 38.0755V36.96C12.6383 36.9609 4.72983 32.855 4.72983 23.7259Z" fill="url(#paint1_linear_322_2)"/>
                         <path d="M18.2325 3.40183V2.00122L17.8753 2.28719C17.7748 2.36759 15.3756 4.29629 12.938 7.08746C9.62239 10.8846 7.94128 14.2879 7.94128 17.2033C7.94128 17.8118 7.96413 18.4212 8.02534 19.0269C8.07833 19.5505 8.15965 20.0712 8.28481 20.5838C8.39537 21.0379 8.54063 21.4837 8.72884 21.9141C8.85675 22.2055 8.99471 22.4878 9.17013 22.7546C9.33368 23.004 9.51549 23.2425 9.71284 23.4672C10.1331 23.9469 10.6265 24.3334 11.1436 24.7125C11.4086 24.9071 11.6826 25.1081 11.9339 25.3192C14.7927 27.7239 16.3925 30.7069 16.5907 33.9823L17.7273 35.2733L17.7255 34.6466C17.7163 30.7956 15.9676 27.2945 12.6694 24.5198C12.3898 24.2849 12.1011 24.0721 11.8206 23.8674C11.5712 23.6838 11.3199 23.501 11.0824 23.3037C10.9664 23.2069 10.854 23.1073 10.7462 23.0022C10.6932 22.9501 10.6411 22.8971 10.5918 22.8423C10.4163 22.6504 10.261 22.4421 10.1221 22.2247C9.98053 22.0027 9.87546 21.7706 9.76857 21.5312C9.27794 20.4294 9.05319 19.0452 9.05319 17.2033C9.05502 11.5269 16.4975 4.87462 18.2325 3.40183Z" fill="url(#paint2_linear_322_2)"/>
@@ -54,19 +61,41 @@ function Header() {
                         </defs>
                     </svg>
                 </Link>
-                <button onClick={handleMenu} id="nav-button">
-                    <svg className="w-8 h-8 sm:w-9 sm:h-9" id="show-nav" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M25 11H11V12H25V11Z" stroke="#283683" strokeLinecap="round" strokeLinejoin="round"/>
-                        <path d="M29 18H7V19H29V18Z" stroke="#283683" strokeLinecap="round" strokeLinejoin="round"/>
-                        <path d="M25 25H11V26H25V25Z" stroke="#283683" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg> 
-    
-                    <svg id="hide-nav" className="hidden w-8 h-8 sm:w-9 sm:h-9" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M29 18H7V19H29V18Z" stroke="#283683" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>                        
-                </button>
+
+                <div className={`${showMenu ? 'hidden' : ''}`}>
+                    <div class="hidden md:block">
+                        <input class="md:w-[400px] lg:w-[590px] xl:w-[696px] px-5 py-3 text-sm placeholder:text-sm outline-none border border-text/40 rounded-lg" type="text" placeholder="{{search keyword}}"/>
+                    </div>
+                </div>
+
+                <div className='flex items-center'>
+                    <div className={`${searchBar ? 'open' : ''} input-box relative h-10 max-w-[50px] w-full rounded-[8px] block md:hidden bg-white ${searchIcon ? "" : "hidden"}`}>
+                        <input type="text" placeholder="{{search keyword}}"/>
+                        <span onClick={openSearchBar} class="icon cursor-pointer">
+                            <svg class="uil uil-search search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.875 18.75C15.2242 18.75 18.75 15.2242 18.75 10.875C18.75 6.52576 15.2242 3 10.875 3C6.52576 3 3 6.52576 3 10.875C3 15.2242 6.52576 18.75 10.875 18.75Z" stroke="#283683" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16.4453 16.4438L21.0016 21.0001" stroke="#283683" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <svg onClick={openSearchBar} className={`${searchBar ? 'block' : 'hidden'} close-icon`} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="#283683"/>
+                        </svg>
+                    </div>
+                    <button onClick={handleMenu} className={`${searchBar ? 'hidden' : ''} transition-all duration-400`}>
+                        <svg className={`${showMenu ? 'hidden' : ''} w-8 h-8 sm:w-9 sm:h-9`} width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M25 11H11V12H25V11Z" stroke="#283683" strokeLinecap="round" strokeLinejoin="round"/>
+                            <path d="M29 18H7V19H29V18Z" stroke="#283683" strokeLinecap="round" strokeLinejoin="round"/>
+                            <path d="M25 25H11V26H25V25Z" stroke="#283683" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg> 
+        
+                        <svg className={`${showMenu ?  '' : 'hidden'} w-8 h-8 sm:w-9 sm:h-9`} width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M29 18H7V19H29V18Z" stroke="#283683" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>  
+                    </button>                      
+                </div>
             </div>
-            <div className={`${showMenu ? 'opacity-100 visible' : 'opacity-0 invisible'} nav-items bg-[#F8F8F8] absolute top-[56px] sm:top-[81px] w-full transition-all duration-300`}>
+
+            <div className={`${showMenu ? 'opacity-100 visible' : 'opacity-0 invisible'} nav-items bg-[#F2F4F7] absolute sm:top-[87px] w-full transition-all duration-300`}>
                 <div className="flex h-full">
                     <div className={`${showMenu ? 'top-0 opacity-100' : '-top-1/2 opacity-0'} left-half w-full sm:w-1/2 flex items-center justify-center sm:border-r transition-all duration-300 ease-in-out relative `}>
                         <div id="nav-option">
@@ -74,10 +103,11 @@ function Header() {
                                     <li onClick={handleMenu}><Link to="">Home</Link></li>
                                     <li onClick={handleMenu}><Link to="/membership">Membership</Link></li>
                                     <li onClick={handleMenu}><Link to="/author">Author</Link></li>
+                                    <li onClick={handleMenu}><Link >Login</Link></li>
                                 </ul>
                         </div>
                     </div>
-                    <div className={`${showMenu?'top-0 opacity-100':'top-1/2 opacity-0'}right-half w-full sm:w-1/2 sm:flex items-center justify-center transition-all duration-300 ease-in-out relative `}>
+                    <div className={`${showMenu?'top-0 opacity-100':'top-1/2 opacity-0'}right-half w-full sm:w-1/2 sm:flex items-center justify-center transition-all duration-300 ease-in-out relative hidden`}>
                         <div id="nav-description" className="sm:full md:w-[598px] px-5">
                             <img className="rounded-[10px] md:w-[80%] lg:w-[80%] xl:w-[80%] 2xl-full" src={img} alt=""/>
                             <p className="flex gap-x-2 text-sm mt-5">

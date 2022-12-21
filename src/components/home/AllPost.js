@@ -70,6 +70,9 @@ function AllPost() {
                     }
                 </Masonry>
             </ResponsiveMasonry>
+            <div className="flex items-center justify-center mt-10">
+                <button className='text-sm font-bold text-primary bg-primary-10 px-[51px] py-3 rounded-[8px]'>See All</button>
+            </div>
         </div>
     </div>
   )
