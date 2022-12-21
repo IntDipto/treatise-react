@@ -29,8 +29,8 @@ function FAQ() {
             <div className="faq-question title cursor-pointer">
                 <p>{faq.questions}</p>
                 <span>
-                    <svg class="a-rolation" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M22.75 10.5L14 19.25L5.25 10.5" stroke="#060B25" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <svg className="a-rolation" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.75 10.5L14 19.25L5.25 10.5" stroke="#060B25" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                 </span>
             </div>

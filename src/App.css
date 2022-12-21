@@ -254,7 +254,60 @@ header h1 {
     max-height: 1000px;
     opacity: 1;
 }
-  
+
+.form-container{
+    box-shadow: -4px 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* custom checkbox */
+.custom-input {
+@apply block relative pl-6 mb-0 cursor-pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+    
+/* Hide the browser's default checkbox */
+.custom-input input {
+    @apply absolute opacity-0 cursor-pointer h-0 w-0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    @apply h-4 w-4 top-0 left-0 absolute bg-white border-primary border-[2px] rounded-[2px] mt-[1px];
+}
+
+/* On mouse-over, add a grey background color */
+.custom-input:hover input ~ .checkmark {
+    background-color:white;
+}
+
+/* When the checkbox is checked, add a blue background */
+.custom-input input:checked ~ .checkmark {
+    background-color: white;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.custom-input input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.custom-input .checkmark:after {
+@apply border border-primary left-[4px] top-0 w-[4.5px] h-[10px]; 
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
 
 @media screen and (max-width: 639px) {
     .nav-items {

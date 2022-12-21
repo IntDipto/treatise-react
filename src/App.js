@@ -8,6 +8,9 @@ import SingleBlog from './pages/SingleBlog';
 import TermsOfService from './pages/TermsOfService';
 import SingleAuthor from './pages/SingleAuthor';
 import Membership from './pages/Membership';
+import SignIn from './pages/SignIn';
+import SignUp from './pages/SignUp';
+import SubscribeMemberShip from './pages/SubscribeMemberShip';
 
 
 function App() {
@@ -19,6 +22,18 @@ function App() {
         {
           path:'/',
           element: <Home></Home>
+        },
+        {
+          path:'/login',
+          element: <SignIn></SignIn>
+        },
+        {
+          path:'/sign-up',
+          element: <SignUp></SignUp>
+        },
+        {
+          path:'/subscribe-membership',
+          element: <SubscribeMemberShip></SubscribeMemberShip>
         },
         {
           path:'/membership',

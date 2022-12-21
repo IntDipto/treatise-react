@@ -63,18 +63,18 @@ function Header() {
                 </Link>
 
                 <div className={`${showMenu ? 'hidden' : ''}`}>
-                    <div class="hidden md:block">
-                        <input class="md:w-[400px] lg:w-[590px] xl:w-[696px] px-5 py-3 text-sm placeholder:text-sm outline-none border border-text/40 rounded-lg" type="text" placeholder="{{search keyword}}"/>
+                    <div className="hidden md:block">
+                        <input className="md:w-[400px] lg:w-[590px] xl:w-[696px] px-5 py-3 text-sm placeholder:text-sm outline-none border border-text/40 rounded-lg" type="text" placeholder="{{search keyword}}"/>
                     </div>
                 </div>
 
                 <div className='flex items-center'>
                     <div className={`${searchBar ? 'open' : ''} input-box relative h-10 max-w-[50px] w-full rounded-[8px] block md:hidden bg-white ${searchIcon ? "" : "hidden"}`}>
                         <input type="text" placeholder="{{search keyword}}"/>
-                        <span onClick={openSearchBar} class="icon cursor-pointer">
-                            <svg class="uil uil-search search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.875 18.75C15.2242 18.75 18.75 15.2242 18.75 10.875C18.75 6.52576 15.2242 3 10.875 3C6.52576 3 3 6.52576 3 10.875C3 15.2242 6.52576 18.75 10.875 18.75Z" stroke="#283683" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M16.4453 16.4438L21.0016 21.0001" stroke="#283683" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <span onClick={openSearchBar} className="icon cursor-pointer">
+                            <svg className="uil uil-search search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.875 18.75C15.2242 18.75 18.75 15.2242 18.75 10.875C18.75 6.52576 15.2242 3 10.875 3C6.52576 3 3 6.52576 3 10.875C3 15.2242 6.52576 18.75 10.875 18.75Z" stroke="#283683" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                <path d="M16.4453 16.4438L21.0016 21.0001" stroke="#283683" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                             </svg>
                         </span>
                         <svg onClick={openSearchBar} className={`${searchBar ? 'block' : 'hidden'} close-icon`} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -103,7 +103,7 @@ function Header() {
                                     <li onClick={handleMenu}><Link to="">Home</Link></li>
                                     <li onClick={handleMenu}><Link to="/membership">Membership</Link></li>
                                     <li onClick={handleMenu}><Link to="/author">Author</Link></li>
-                                    <li onClick={handleMenu}><Link >Login</Link></li>
+                                    <li onClick={handleMenu}><Link to="/login" >Login</Link></li>
                                 </ul>
                         </div>
                     </div>
