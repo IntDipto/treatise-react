@@ -28,18 +28,18 @@ function AllPost() {
         setFilterProduct(filteredproducts)
     }
 
-    console.log(filterProduct);
+    // console.log(filterProduct);
 
   return (
     <div id="all-post" className="mt-20 mb-20">
     <h2 className="text-primary font-bold text-base sm:text-[24px] text-center sm:text-left mx-6 leading-[150%]">All Posts</h2>
         <div className="catagories mx-6 mt-6 items-menu">
             <ul className="flex gap-x-6 text-text  whitespace-nowrap overflow-x-scroll text-sm sm:text-base scroll-bar">
-                <li onClick={()=> categoryHander('all')} className={`${activebtn === 'all' ? ' btn-active ':''} px-7 py-3 cursor-pointer`}>All</li>
-                <li onClick={()=> categoryHander('Career & Growth')} className={`${activebtn === 'Career & Growth' ? ' btn-active ':''}"px-7 py-3 cursor-pointer`}>Career & Growth</li>
-                <li onClick={()=> categoryHander('Process')} className={`${activebtn === 'Process' ? ' btn-active ':''} px-7 py-3 cursor-pointer`}>Process</li>
-                <li onClick={()=> categoryHander('Product')}className={`${activebtn === 'Product' ? ' btn-active ':''} px-7 py-3 cursor-pointer`}>Product</li>
-                <li onClick={()=> categoryHander('Design System')} className={`${activebtn === 'Design System' ? ' btn-active ':''} px-7 py-3 cursor-pointer`}>Design System</li>
+                <li onClick={()=> categoryHander('all')} className={`${activebtn === 'all' ? ' btn-active ':''} px-6 sm:px-7 py-2 sm:py-3 cursor-pointer`}>All</li>
+                <li onClick={()=> categoryHander('Career & Growth')} className={`${activebtn === 'Career & Growth' ? ' btn-active ':''}"px-6 sm:px-7 py-2 sm:py-3 cursor-pointer`}>Career & Growth</li>
+                <li onClick={()=> categoryHander('Process')} className={`${activebtn === 'Process' ? ' btn-active ':''} px-6 sm:px-7 py-2 sm:py-3 cursor-pointer`}>Process</li>
+                <li onClick={()=> categoryHander('Product')}className={`${activebtn === 'Product' ? ' btn-active ':''} px-6 sm:px-7 py-2 sm:py-3 cursor-pointer`}>Product</li>
+                <li onClick={()=> categoryHander('Design System')} className={`${activebtn === 'Design System' ? ' btn-active ':''} px-6 sm:px-7 py-2 sm:py-33 cursor-pointer`}>Design System</li>
             </ul>
         </div>
         <div className="mt-10  mx-6">

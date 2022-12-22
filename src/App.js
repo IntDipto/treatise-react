@@ -11,6 +11,7 @@ import Membership from './pages/Membership';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import SubscribeMemberShip from './pages/SubscribeMemberShip';
+import AuthorProfile from './pages/AuthorProfile';
 
 
 function App() {
@@ -34,6 +35,10 @@ function App() {
         {
           path:'/subscribe-membership',
           element: <SubscribeMemberShip></SubscribeMemberShip>
+        },
+        {
+          path:'/author-profile',
+          element: <AuthorProfile></AuthorProfile>
         },
         {
           path:'/membership',
