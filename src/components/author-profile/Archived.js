@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import {motion} from 'framer-motion'
 
 function Archived() {
     const [posts, setPosts] = useState([]) 
@@ -14,8 +15,12 @@ function Archived() {
     <div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-8">
             {
-                posts.map(post =>
-                    <div key={post.id} className="border rounded-[10px]"> 
+                posts.map((post,i) =>
+                    <motion.div key={post.id} 
+                    initial = {{opacity: 0, translateX: -50, translateY: -50}}
+                    animate = {{opacity: 1, translateX: 0, translateY:0}}
+                    transition = {{duration: 0.4, delay : i * 0.2}}
+                    className="border rounded-[10px]"> 
                         <img className="w-full rounded-t-[10px]" src={require(`./../../assests/images/Author-Profile/archive/${post.img}.webp`)} alt="" srcSet=""/>
                         <div className="p-4">
                             <p className="text-xs sm:text-sm text-text-60">{post.date}</p>
@@ -62,7 +67,7 @@ function Archived() {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 )
             }
         </div>

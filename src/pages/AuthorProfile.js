@@ -6,6 +6,7 @@ import Archived from '../components/author-profile/Archived'
 import AuthorInformation from '../components/author-profile/AuthorInformation'
 import Draft from '../components/author-profile/Draft'
 import Published from '../components/author-profile/Published'
+import { motion } from 'framer-motion'
 
 function AuthorProfile() {
     const [activebtn , setActiveBtn] = useState("profile");
@@ -75,10 +76,10 @@ function AuthorProfile() {
             <div className="flex justify-center mx-4 md:mx-[15%]">
                 <div className="items-menu overflow-x-scroll scroll-bar my-8">
                     <ul className="flex gap-x-2 sm:gap-x-6 text-text  whitespace-nowrap text-sm">
-                        <li onClick={()=>setActiveBtn("profile")} className={`${activebtn === 'profile' ? ' blog-active-btn':''} px-6 sm:px-7 py-2 sm:py-3 cursor-pointer font-bold`} >Profile</li>
-                        <li onClick={()=>setActiveBtn("draft")} className={`${activebtn === 'draft' ? ' blog-active-btn':''} px-6 sm:px-7 py-2 sm:py-3 cursor-pointer font-bold`} >Drafts</li>
-                        <li onClick={()=>setActiveBtn("publish")} className={`${activebtn === 'publish' ? ' blog-active-btn':''} px-6 sm:px-7 py-2 sm:py-3 cursor-pointer font-bold`} >Published</li>
-                        <li onClick={()=>setActiveBtn("archive")} className={`${activebtn === 'archive' ? ' blog-active-btn':''} px-6 sm:px-7 py-2 sm:py-3 cursor-pointer font-bold`} >Archived</li>
+                        <li><button onClick={()=>setActiveBtn("profile")} className={`${activebtn === 'profile' ? ' blog-active-btn':''} px-6 sm:px-7 py-2 sm:py-3 cursor-pointer font-bold`}>Profile</button></li>
+                        <li><button onClick={()=>setActiveBtn("draft")} className={`${activebtn === 'draft' ? ' blog-active-btn':''} px-6 sm:px-7 py-2 sm:py-3 cursor-pointer font-bold`} >Drafts</button></li>
+                        <li><button onClick={()=>setActiveBtn("publish")} className={`${activebtn === 'publish' ? ' blog-active-btn':''} px-6 sm:px-7 py-2 sm:py-3 cursor-pointer font-bold`}>Published</button></li>
+                        <li><button onClick={()=>setActiveBtn("archive")} className={`${activebtn === 'archive' ? ' blog-active-btn':''} px-6 sm:px-7 py-2 sm:py-3 cursor-pointer font-bold`}>Archived</button></li>
                     </ul>
                 </div>
             </div>
@@ -88,35 +89,52 @@ function AuthorProfile() {
                 {/* <!-- option 01 : personal details --> */}
                 {
                     (activebtn === "profile") &&
-                    <div className="">
+                    <motion.div className=""
+                    initial = {{opacity: 0, translateX: -50, translateY: -50}}
+                    animate = {{opacity: 1, translateX: 0, translateY:0}}
+                    transition = {{duration: 0.4, delay : 0.2}}
+
+                    >
                         <AuthorInformation></AuthorInformation>
-                    </div>
+                    </motion.div>
                 }
                
 
                 {/* <!-- option 02 : Drafts  --> */}
                 {
                     (activebtn === "draft") &&
-                    <div id="drafts" className="mt-10 mx-6">
+                    <motion.div id="drafts" className="mt-10 mx-6"
+                    initial = {{opacity: 0, translateX: 50, translateY: -50}}
+                    animate = {{opacity: 1, translateX: 0, translateY:0}}
+                    transition = {{duration: 0.4, delay : 0.2}}
+                    >
                         <Draft></Draft>
-                    </div>
+                    </motion.div>
                 }
                 
 
                 {/* <!-- option 03 : Drafts  --> */}
                 {
                     (activebtn === "publish") &&
-                    <div id="publish" className="mt-10 mx-6">
+                    <motion.div id="publish" className="mt-10 mx-6"
+                    initial = {{opacity: 0, translateX: 50, translateY: -50}}
+                    animate = {{opacity: 1, translateX: 0, translateY:0}}
+                    transition = {{duration: 0.4, delay : 0.2}}
+                    >
                         <Published></Published>
-                    </div>
+                    </motion.div>
                 }
 
                 {/* <!-- option 04 : Archived  --> */}
                 {
                     (activebtn === "archive") &&
-                    <div id="archived" className="mt-10 mx-6">
+                    <motion.div id="archived" className="mt-10 mx-6"
+                    initial = {{opacity: 0, translateX: 50, translateY: -50}}
+                    animate = {{opacity: 1, translateX: 0, translateY:0}}
+                    transition = {{duration: 0.4, delay : 0.2}}
+                    >
                         <Archived></Archived>
-                    </div>
+                    </motion.div>
                 }
 
             </div>

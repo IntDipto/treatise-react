@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 
 function AllPost() {
 
@@ -17,10 +18,10 @@ function AllPost() {
         })
     },[])
 
-    console.log(filterProduct);
     const categoryHander = (e)=> {
         if(e === 'all'){
             setFilterProduct(posts)
+            setActiveBtn(e)
             return
         }
         setActiveBtn(e)
@@ -28,7 +29,6 @@ function AllPost() {
         setFilterProduct(filteredproducts)
     }
 
-    // console.log(filterProduct);
 
   return (
     <div id="all-post" className="mt-20 mb-20">
@@ -48,30 +48,36 @@ function AllPost() {
             >
                 <Masonry> 
                     {
-                        filterProduct?.map(post =>
-                            <Link key={post.id} href="" className="items Product m-[10px]">
-                                <div className="border rounded-[10px] h-fit">
-                                    <img className="w-full" src={require(`./../../assests/images/home/all-posts/${post.img}.webp`)} alt=""/>
-                                    <div className="p-4">
-                                        <p className="flex gap-x-2 text-xs md:text-sm">
-                                            <span className="text-primary">#Career & Growth</span>
-                                            <span className="text-text">|</span>
-                                            <span className="text-text-60">22 June, 2022</span>
-                                        </p>
-                                        <p className="text-base md:text-[18px] text-text font-bold mt-4">10 things nobody told your about Being a web designer!</p>
-                                        <p className="flex justify-between text-xs sm:text-sm mt-4">
-                                            <span className="text-text">by James Frankline</span>
-                                            <span className="text-text-60">5 mins to read</span>
-                                        </p>
+                        filterProduct?.map((post,i) =>
+                            <motion.div key={post.id} className="items Product m-[10px]"
+                            initial = {{opacity: 0, translateX: -50, translateY: -50}}
+                            animate = {{opacity: 1, translateX: 0, translateY:0}}
+                            transition = {{duration: 0.4, delay : i * 0.2}}
+                            >
+                                <Link>
+                                    <div className="border rounded-[10px] h-fit">
+                                        <img className="w-full" src={require(`./../../assests/images/home/all-posts/${post.img}.webp`)} alt=""/>
+                                        <div className="p-4">
+                                            <p className="flex gap-x-2 text-xs md:text-sm">
+                                                <span className="text-primary">#Career & Growth</span>
+                                                <span className="text-text">|</span>
+                                                <span className="text-text-60">22 June, 2022</span>
+                                            </p>
+                                            <p className="text-base md:text-[18px] text-text font-bold mt-4">10 things nobody told your about Being a web designer!</p>
+                                            <p className="flex justify-between text-xs sm:text-sm mt-4">
+                                                <span className="text-text">by James Frankline</span>
+                                                <span className="text-text-60">5 mins to read</span>
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                            </Link>    
+                                </Link> 
+                            </motion.div>   
                         )
                     }
                 </Masonry>
             </ResponsiveMasonry>
             <div className="flex items-center justify-center mt-10">
-                <button className='text-sm font-bold text-primary bg-primary-10 px-[51px] py-3 rounded-[8px]'>See All</button>
+                <Link to='/allpost' className='text-sm font-bold text-primary bg-primary-10 px-[51px] py-3 rounded-[8px]'>See All</Link>
             </div>
         </div>
     </div>

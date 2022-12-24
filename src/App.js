@@ -12,6 +12,7 @@ import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import SubscribeMemberShip from './pages/SubscribeMemberShip';
 import AuthorProfile from './pages/AuthorProfile';
+import AllPosts from './pages/AllPosts';
 
 
 function App() {
@@ -49,6 +50,10 @@ function App() {
           element: <Author></Author>
         },
         {
+          path:'/allpost',
+          element: <AllPosts></AllPosts>
+        },
+        {
           path:'/authorDetails/:id',
           element: <SingleAuthor></SingleAuthor>
         },
@@ -59,7 +64,7 @@ function App() {
         {
           path:'/blog/:id',
           element: <SingleBlog></SingleBlog>
-        },
+        }
       ]
     },
     {

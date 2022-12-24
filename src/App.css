@@ -343,6 +343,10 @@ author details page
     @apply opacity-100 transition duration-500;
 }
 
+.rti--container{
+    @apply w-full sm:w-[450px] p-3 border-none !border-text-10 text-sm rounded-[4px] h-12 !outline-none !shadow-none;
+}
+
 
 @media screen and (max-width: 639px) {
     .nav-items {
