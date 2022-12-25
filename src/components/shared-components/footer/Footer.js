@@ -49,7 +49,7 @@ function Footer() {
             <div className="lg:block hidden absolute left-1/2 -translate-x-1/2">
                 <ul className="flex gap-x-8 text-text">
                     <li><Link to="/">Home</Link></li>
-                    <li><Link to=" ">Membership</Link></li>
+                    <li><Link to='/membership'>Membership</Link></li>
                     <li><Link to="/author">Author</Link></li>
                     <li><Link to="/*">404 page</Link></li>
                 </ul>
@@ -84,7 +84,7 @@ function Footer() {
         <div className="flex justify-between lg:justify-center mt-6 mx-[6%] lg:mx-0 border-b lg:border-0 pb-10 lg:pb-0">
             <ul className="flex flex-col lg:flex-row gap-y-6 lg:gap-x-8 text-text lg:hidden h-fit text-sm md:text-base">
                 <li><Link to='/'>Home</Link></li>
-                <li><Link >Membership</Link></li>
+                <li><Link to='/membership' >Membership</Link></li>
                 <li><Link to="/author">Author</Link></li>
                 <li><Link to="/*">404 page</Link></li>
             </ul>

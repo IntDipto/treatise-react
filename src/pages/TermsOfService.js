@@ -11,8 +11,8 @@ function TermsOfService() {
     <div className='mt-20'>
         <div style={{"backgroundImage":`url(${bg})`}} className="h-[280px] w-full">
         </div>
-        <div className="relative -top-36 flex justify-center mx-4 sm:mx-8 xl:mx-0">
-            <div  id="options" className="w-full xl:w-[1240px] px-2 sm:px-[64px] py-6 sm:py-[64px] bg-white ">
+        <div className="relative -top-36 flex justify-center mx-4 sm:mx-8 xl:mx-0 ">
+            <div  id="options" className="w-full xl:w-[1240px] px-2 sm:px-[64px] py-6 sm:py-[64px] bg-white shadow-lg">
                 <div className="pb-10 border-b">
                     <h3 className="text-[24px] sm:text-[48px] text-text font-bold leading-[150%]">Terms of services</h3>
                     <p className="mt-2 text-text-60 text-sm">Version 14.123.1</p>
