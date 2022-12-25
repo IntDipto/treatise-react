@@ -1,3 +1,4 @@
+@import url("https:cdn.syncfusion.com/ej2/material.css");
 .nav-items {
     height: calc(100vh - 87px);
     width: 100vw;
@@ -345,6 +346,25 @@ author details page
 
 .rti--container{
     @apply w-full sm:w-[450px] p-3 border-none !border-text-10 text-sm rounded-[4px] h-12 !outline-none !shadow-none;
+}
+
+.paginnation ul{
+    @apply flex items-start justify-center gap-x-5 text-text-40 text-xs font-bold;
+}
+
+.paginnation ul li a{
+    @apply flex items-center justify-center text-text-40 text-xs font-bold h-8 w-8 border rounded-[5px];
+}
+
+.paginnation .previous-btn a{
+    @apply flex items-center justify-center text-text-40 text-xs font-bold border-none w-fit;
+}
+
+.paginnation .next-btn a{
+    @apply flex items-center justify-center text-text-40 text-xs font-bold border-none w-fit;
+}
+.paginnation .active-page a{
+    @apply text-xs font-bold h-8 w-8 border rounded-[5px] bg-primary text-white;
 }
 
 

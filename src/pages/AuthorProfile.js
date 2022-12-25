@@ -24,7 +24,7 @@ function AuthorProfile() {
                     <div className="profile-pic flex-shrink-0 relative">
                         <img className="border-[4px] border-[#7A7A7A]/60 rounded-full w-20 sm:w-[150px] md:w-[200px] h-20 sm:h-[150px] md:h-[200px]" src={avater} alt=""/>
                         <div className="absolute bottom-1 sm:bottom-4 right-0">
-                            <label htmlFor="image">
+                            <label htmlhtmlFor="image">
                                 <svg className="w-5 h-5 sm:w-12 sm:h-12" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g filter="url(#filter0_d_808_4575)">
                                     <path d="M4 20C4 31.0457 12.9543 40 24 40C35.0457 40 44 31.0457 44 20C44 8.95431 35.0457 0 24 0C12.9543 0 4 8.95431 4 20Z" fill="white"/>
