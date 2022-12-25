@@ -13,6 +13,7 @@ import SignUp from './pages/SignUp';
 import SubscribeMemberShip from './pages/SubscribeMemberShip';
 import AuthorProfile from './pages/AuthorProfile';
 import AllPosts from './pages/AllPosts';
+import CreateBlog from './pages/CreateBlog';
 
 
 function App() {
@@ -40,6 +41,10 @@ function App() {
         {
           path:'/author-profile',
           element: <AuthorProfile></AuthorProfile>
+        },
+        {
+          path:'/create-blog',
+          element: <CreateBlog></CreateBlog>
         },
         {
           path:'/membership',

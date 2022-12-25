@@ -13,11 +13,11 @@ function SignIn() {
 
                 <form className="mt-10" action="">
                     <div className="flex flex-col gap-y-2">
-                        <label className="text-sm sm:text-base text-text leading-[17px] sm:leading-[21px]" htmlhtmlFor="email">Email</label>
+                        <label className="text-sm sm:text-base text-text leading-[17px] sm:leading-[21px]" htmlFor="email">Email</label>
                         <input id="email" className="text-sm outline-none border-2 border-text-10 px-5 sm:px-7 py-2 sm:py-3 rounded-[10px] placeholder:text-sm placeholder:leading-[17px]" type="text" placeholder="Email"/>
                     </div>
                     <div className="flex flex-col gap-y-2 mt-6">
-                        <label className="text-sm sm:text-base text-text leading:[18px] sm:leading-[21px]" htmlhtmlFor="passwprd">Password</label>
+                        <label className="text-sm sm:text-base text-text leading:[18px] sm:leading-[21px]" htmlFor="passwprd">Password</label>
                         <div className="w-full relative">
                             <input id="passwprd" className="text-sm w-full outline-none border-2 border-text-10 px-5 sm:px-7 py-2 sm:py-3 rounded-[10px] placeholder:text-sm placeholder:leading-[17px]" type="text" placeholder="Password"/>
 

@@ -52,7 +52,7 @@ function AuthorInformation() {
     const handleEdit = (e) =>{
         SetDisplayInfo(e)
     }
-    console.log(displayInfo);
+    // console.log(displayInfo);
   return (
     <div>
         <div id="profile" className="mx-4 md:mx-[15%]">
@@ -270,35 +270,35 @@ function AuthorInformation() {
                         <div className="flex justify-center">
                             <form className="py-0 sm:py-8 w-full sm:w-[610px] flex flex-col gap-y-6">
                                 <div className="flex flex-col sm:flex-row items-start sm:items-center w-full">
-                                    <label className="w-[160px] block text-sm font-bold text-text" htmlhtmlFor="name">Name</label>
+                                    <label className="w-[160px] block text-sm font-bold text-text" htmlFor="name">Name</label>
                                     <input className="mt-2 sm:mt-0 p-3 border border-text-10 w-full sm:w-[450px] text-sm font-bold placeholder:text-primary-80 outline-none rounded-[4px]" type="text" name="" id="name" placeholder="{{first Name last Name}}"/>
                                 </div>
                                 <div className="flex flex-col sm:flex-row items-start sm:items-center w-full">
-                                    <label className="w-[160px] block text-sm font-bold text-text" htmlhtmlFor="">Username</label>
+                                    <label className="w-[160px] block text-sm font-bold text-text" htmlFor="">Username</label>
                                     <input className="mt-2 sm:mt-0 p-3 border border-text-10 w-full sm:w-[450px] text-sm font-bold placeholder:text-primary-80 outline-none rounded-[4px]" type="text" name="" id="name" placeholder="{{unique name}}"/>
                                 </div>
                                 <div className="flex flex-col sm:flex-row w-full justify-start">
-                                    <label className="w-[160px] block text-sm font-bold sm:mt-[11px]" htmlhtmlFor="name">About</label>
+                                    <label className="w-[160px] block text-sm font-bold sm:mt-[11px]" htmlFor="name">About</label>
                                     <textarea className="mt-2 sm:mt-0 p-3 border border-text-10 w-full sm:w-[450px] h-40 text-sm font-bold placeholder:text-primary-80 outline-none rounded-[4px]" name="" id="" cols="30" rows="10" placeholder="{{address}}"></textarea>
                                 </div>
                                 <div className="flex flex-col sm:flex-row items-start sm:items-center w-full">
-                                    <label className="w-[160px] block text-sm font-bold text-text" htmlhtmlFor="name">Location</label>
+                                    <label className="w-[160px] block text-sm font-bold text-text" htmlFor="name">Location</label>
                                     <input className="mt-2 sm:mt-0 p-3 border border-text-10 w-full sm:w-[450px] text-sm font-bold placeholder:text-primary-80 outline-none rounded-[4px]" type="text" name="" id="name" placeholder="{{first Name last Name}}"/>
                                 </div>
                                 <div className="flex flex-col sm:flex-row items-start sm:items-center w-full">
-                                    <label className="w-[160px] block text-sm font-bold text-text" htmlhtmlFor="name">Phone</label>
+                                    <label className="w-[160px] block text-sm font-bold text-text" htmlFor="name">Phone</label>
                                     <input className="mt-2 sm:mt-0 p-3 border border-text-10 w-full sm:w-[450px] text-sm font-bold placeholder:text-primary-80 outline-none rounded-[4px]" type="text" name="" id="name" placeholder="{{number}}"/>
                                 </div>
                                 <div className="flex flex-col sm:flex-row items-start sm:items-center w-full">
-                                    <label className="w-[160px] block text-sm font-bold text-text" htmlhtmlFor="name">Email</label>
+                                    <label className="w-[160px] block text-sm font-bold text-text" htmlFor="name">Email</label>
                                     <input className="mt-2 sm:mt-0 p-3 border border-text-10 w-full sm:w-[450px] text-sm font-bold placeholder:text-primary-80 outline-none rounded-[4px]" type="text" name="" id="name" placeholder="{{email}}"/>
                                 </div>
                                 <div className="flex flex-col sm:flex-row items-start sm:items-center w-full">
-                                    <label className="w-[160px] block text-sm font-bold text-text" htmlhtmlFor="name">Date of Birth</label>
+                                    <label className="w-[160px] block text-sm font-bold text-text" htmlFor="name">Date of Birth</label>
                                     <input className="mt-2 sm:mt-0 p-3 border border-text-10 w-full sm:w-[450px] text-sm font-bold placeholder:text-primary-80 outline-none rounded-[4px]" type="text" name="" id="name" placeholder="{{date}}"/>
                                 </div>
                                 <div className="flex flex-col sm:flex-row items-start w-full">
-                                    <label className="w-[160px] block text-sm font-bold sm:mt-[11px]" htmlhtmlFor="name">Social Media</label>
+                                    <label className="w-[160px] block text-sm font-bold sm:mt-[11px]" htmlFor="name">Social Media</label>
                                     <div className="flex flex-col gap-y-2 social media">
                                         {inputList.length > 0 ? inputList.map((input, index) => (
                                             <div key={index} className="relative">
@@ -331,14 +331,14 @@ function AuthorInformation() {
                                     </button>
                                 </div>
                                 <div className="flex flex-col sm:flex-row w-full justify-start">
-                                    <label className="w-[160px] block text-sm font-bold text-text mt-[11px]" htmlhtmlFor="name">Current Profession</label>
+                                    <label className="w-[160px] block text-sm font-bold text-text mt-[11px]" htmlFor="name">Current Profession</label>
                                     <div className="mt-2 sm:mt-0 flex flex-col gap-y-2 sm:gap-y-6 w-full sm:w-[450px]">
                                         <input className="p-3 border border-text-10 w-full sm:w-[450px] text-sm font-bold placeholder:text-primary-80 outline-none rounded-[4px]" type="text" name="" id="name" placeholder="{{Position Name}}"/>
                                         <input className="p-3 border border-text-10 w-full sm:w-[450px] text-sm font-bold placeholder:text-primary-80 outline-none rounded-[4px]" type="text" name="" id="name" placeholder="{{Company Name}}"/>
                                     </div>
                                 </div>
                                 <div className="flex flex-col sm:flex-row w-full justify-start items-start">
-                                    <label className="w-[160px] block text-sm font-bold text-text mt-[11px]" htmlhtmlFor="name">Interested In</label>
+                                    <label className="w-[160px] block text-sm font-bold text-text mt-[11px]" htmlFor="name">Interested In</label>
                                     <div>
                                         {/* <input className="border-none bg-transparent outline-none text-sm font-bold placeholder:text-primary-80 rounded-[4px] w-full mr-2 " type="text" name="" id="tag-input1" placeholder="{{url}}"/> */}
                                         <TagsInput className="border-none bg-transparent outline-none text-sm font-bold placeholder:text-primary-80 rounded-[4px] w-full mr-2 "
@@ -374,17 +374,17 @@ function AuthorInformation() {
                             <form className="py-0 sm:py-8 w-full sm:w-[610px] flex flex-col gap-y-6">
 
                                 <div className="flex flex-col sm:flex-row items-start sm:items-center w-full">
-                                    <label className="w-[160px] block text-sm font-bold text-text" htmlhtmlFor="name">Old Password</label>
+                                    <label className="w-[160px] block text-sm font-bold text-text" htmlFor="name">Old Password</label>
                                     <input className="mt-2 sm:mt-0 p-3 border border-text-10 w-full sm:w-[450px] text-sm font-bold placeholder:text-primary-80 outline-none rounded-[4px]" type="text" name="" id="name" placeholder="{{old password}}"/>
                                 </div>
 
                                 <div className="flex flex-col sm:flex-row items-start sm:items-center w-full">
-                                    <label className="w-[160px] block text-sm font-bold text-text" htmlhtmlFor="name">New Password</label>
+                                    <label className="w-[160px] block text-sm font-bold text-text" htmlFor="name">New Password</label>
                                     <input className="mt-2 sm:mt-0 p-3 border border-text-10 w-full sm:w-[450px] text-sm font-bold placeholder:text-primary-80 outline-none rounded-[4px]" type="text" name="" id="name" placeholder="{{new password}}"/>
                                 </div>
 
                                 <div className="flex flex-col sm:flex-row items-start sm:items-center w-full">
-                                    <label className="w-[160px] block text-sm font-bold text-text" htmlhtmlFor="name">Confirm Password</label>
+                                    <label className="w-[160px] block text-sm font-bold text-text" htmlFor="name">Confirm Password</label>
                                     <input className="mt-2 sm:mt-0 p-3 border border-text-10 w-full sm:w-[450px] text-sm font-bold placeholder:text-primary-80 outline-none rounded-[4px]" type="text" name="" id="name" placeholder="{{confirm password}}"/>
                                 </div>
 

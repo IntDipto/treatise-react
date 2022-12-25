@@ -12,19 +12,19 @@ function SignUp() {
 
                 <form className="mt-10" action="">
                     <div className="flex flex-col gap-y-2">
-                        <label className="text-sm sm:text-base text-text leading-[17px] sm:leading-[21px]" htmlhtmlFor="">First Name</label>
+                        <label className="text-sm sm:text-base text-text leading-[17px] sm:leading-[21px]" htmlFor="">First Name</label>
                         <input className="text-sm outline-none border-2 border-text-10 px-5 sm:px-7 py-2 sm:py-3 rounded-[10px] placeholder:text-sm placeholder:leading-[17px]" type="text" placeholder="First Name"/>
                     </div>
                     <div className="flex flex-col gap-y-2 mt-6">
-                        <label className="text-sm sm:text-base text-text leading-[17px] sm:leading-[21px]" htmlhtmlFor="">last Name</label>
+                        <label className="text-sm sm:text-base text-text leading-[17px] sm:leading-[21px]" htmlFor="">last Name</label>
                         <input className="text-sm outline-none border-2 border-text-10 px-5 sm:px-7 py-2 sm:py-3 rounded-[10px] placeholder:text-sm placeholder:leading-[17px]" type="text" placeholder="Last Name"/>
                     </div>
                     <div className="flex flex-col gap-y-2 mt-6">
-                        <label className="text-sm sm:text-base text-text leading-[17px] sm:leading-[21px]" htmlhtmlFor="">Email</label>
+                        <label className="text-sm sm:text-base text-text leading-[17px] sm:leading-[21px]" htmlFor="">Email</label>
                         <input className="text-sm outline-none border-2 border-text-10 px-5 sm:px-7 py-2 sm:py-3 rounded-[10px] placeholder:text-sm placeholder:leading-[17px]" type="text" placeholder="Email"/>
                     </div>
                     <div className="flex flex-col gap-y-2 mt-6">
-                        <label className="text-sm sm:text-base text-text leading-[17px] sm:leading-[21px]" htmlhtmlFor="">Password</label>
+                        <label className="text-sm sm:text-base text-text leading-[17px] sm:leading-[21px]" htmlFor="">Password</label>
                         <div className="w-full relative">
                             <input className="text-sm w-full outline-none border-2 border-text-10 px-5 sm:px-7 py-2 sm:py-3 rounded-[10px] placeholder:text-sm placeholder:leading-[17px]" type="text" placeholder="Password"/>
 

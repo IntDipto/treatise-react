@@ -344,8 +344,11 @@ author details page
     @apply opacity-100 transition duration-500;
 }
 
+/* all blog page  */
+
 .rti--container{
-    @apply w-full sm:w-[450px] p-3 border-none !border-text-10 text-sm rounded-[4px] h-12 !outline-none !shadow-none;
+    @apply w-full sm:w-[450px] p-3 border-none !border-text-10 text-sm rounded-[4px] !outline-none !shadow-none;
+    min-height: 48px;
 }
 
 .paginnation ul{
@@ -367,6 +370,13 @@ author details page
     @apply text-xs font-bold h-8 w-8 border rounded-[5px] bg-primary text-white;
 }
 
+/* create blog page  */
+.editor-class.rdw-editor-main{
+    @apply px-3;
+}
+.public-DraftStyleDefault-ltr{
+    min-height: 380px;
+}
 
 @media screen and (max-width: 639px) {
     .nav-items {

@@ -7,14 +7,15 @@ import AuthorInformation from '../components/author-profile/AuthorInformation'
 import Draft from '../components/author-profile/Draft'
 import Published from '../components/author-profile/Published'
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 function AuthorProfile() {
     const [activebtn , setActiveBtn] = useState("profile");
 
   return (
     <div className='mt-[56px] sm:mt-[87px]'>
-         {/* <!-- banner and name details  --> */}
-       <div className="banner-name">
+        {/* <!-- banner and name details  --> */}
+        <div className="banner-name">
             <div className="h-[120px] sm:h-[180px] w-full">
                 <img className="h-full" src={bg} alt="" srcSet=""/>
             </div>
@@ -24,7 +25,7 @@ function AuthorProfile() {
                     <div className="profile-pic flex-shrink-0 relative">
                         <img className="border-[4px] border-[#7A7A7A]/60 rounded-full w-20 sm:w-[150px] md:w-[200px] h-20 sm:h-[150px] md:h-[200px]" src={avater} alt=""/>
                         <div className="absolute bottom-1 sm:bottom-4 right-0">
-                            <label htmlhtmlFor="image">
+                            <label htmlFor="image">
                                 <svg className="w-5 h-5 sm:w-12 sm:h-12" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g filter="url(#filter0_d_808_4575)">
                                     <path d="M4 20C4 31.0457 12.9543 40 24 40C35.0457 40 44 31.0457 44 20C44 8.95431 35.0457 0 24 0C12.9543 0 4 8.95431 4 20Z" fill="white"/>
@@ -55,20 +56,22 @@ function AuthorProfile() {
                             <p className="text-text-40 text-sm sm:text-[13px] md:text-base mt-2 text-center sm:text-left">Chris H</p>
                         </div>
                         <div className="edit-btn mt-10 sm:mt-0">
-                            <button className="flex gap-x-3 items-center border border-primary/90 px-6  lg:px-10 py-2 lg:py-3 rounded-[8px]">
-                                <span>
-                                    <svg className="w-4 md:w-6 h-4 md:h-6" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M3.75 12H20.25" stroke="#283683" strokeOpacity="0.9" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                                        <path d="M12 3.75V20.25" stroke="#283683" strokeOpacity="0.9" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                                    </svg>
-                                </span>
-                                <span className="text-sm sm:text-xs md:text-sm font-bold text-primary/90"><a href="./CreateBlog.html">Create Blog</a></span>
-                            </button>
+                            <Link to='/create-blog'>
+                                <button className="flex gap-x-3 items-center border border-primary/90 px-6  lg:px-10 py-2 lg:py-3 rounded-[8px]">
+                                    <span>
+                                        <svg className="w-4 md:w-6 h-4 md:h-6" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.75 12H20.25" stroke="#283683" strokeOpacity="0.9" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                            <path d="M12 3.75V20.25" stroke="#283683" strokeOpacity="0.9" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                        </svg>
+                                    </span>
+                                    <span className="text-sm sm:text-xs md:text-sm font-bold text-primary/90">Create Blog</span>
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
             </div>
-       </div>
+        </div>
 
        <div className="">
 

@@ -10,12 +10,12 @@ function SubscribeMemberShip() {
 
                 <form className="mt-10" action="">
                     <div className="flex flex-col gap-y-2">
-                        <label className="text-sm sm:text-base text-text leading-[17px] sm:leading-[21px]" htmlhtmlFor="name">Name</label>
+                        <label className="text-sm sm:text-base text-text leading-[17px] sm:leading-[21px]" htmlFor="name">Name</label>
                         <input id="name" className="text-sm outline-none border-2 border-text-10 px-5 sm:px-7 py-2 sm:py-3 rounded-[10px] placeholder:text-sm placeholder:leading-[17px]" type="text" placeholder="Email"/>
                     </div>
 
                     <div className="flex flex-col gap-y-2 mt-6">
-                        <label className="text-sm sm:text-base text-text leading-[17px] sm:leading-[21px]" htmlhtmlFor="">Email</label>
+                        <label className="text-sm sm:text-base text-text leading-[17px] sm:leading-[21px]" htmlFor="">Email</label>
                         <input className="text-sm outline-none border-2 border-text-10 px-5 sm:px-7 py-2 sm:py-3 rounded-[10px] placeholder:text-sm placeholder:leading-[17px]" type="text" placeholder="Email"/>
                     </div>
 
