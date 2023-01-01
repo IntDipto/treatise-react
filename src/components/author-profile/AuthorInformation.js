@@ -279,11 +279,11 @@ function AuthorInformation() {
                                 </div>
                                 <div className="flex flex-col sm:flex-row w-full justify-start">
                                     <label className="w-[160px] block text-sm font-bold sm:mt-[11px]" htmlFor="name">About</label>
-                                    <textarea className="mt-2 sm:mt-0 p-3 border border-text-10 w-full sm:w-[450px] h-40 text-sm font-bold placeholder:text-primary-80 outline-none rounded-[4px]" name="" id="" cols="30" rows="10" placeholder="{{address}}"></textarea>
+                                    <textarea className="mt-2 sm:mt-0 p-3 border border-text-10 w-full sm:w-[450px] h-40 text-sm font-bold placeholder:text-primary-80 outline-none rounded-[4px]" name="" id="" cols="30" rows="10" placeholder="{{about bio}}"></textarea>
                                 </div>
                                 <div className="flex flex-col sm:flex-row items-start sm:items-center w-full">
                                     <label className="w-[160px] block text-sm font-bold text-text" htmlFor="name">Location</label>
-                                    <input className="mt-2 sm:mt-0 p-3 border border-text-10 w-full sm:w-[450px] text-sm font-bold placeholder:text-primary-80 outline-none rounded-[4px]" type="text" name="" id="name" placeholder="{{first Name last Name}}"/>
+                                    <input className="mt-2 sm:mt-0 p-3 border border-text-10 w-full sm:w-[450px] text-sm font-bold placeholder:text-primary-80 outline-none rounded-[4px]" type="text" name="" id="name" placeholder="{{address}}"/>
                                 </div>
                                 <div className="flex flex-col sm:flex-row items-start sm:items-center w-full">
                                     <label className="w-[160px] block text-sm font-bold text-text" htmlFor="name">Phone</label>
