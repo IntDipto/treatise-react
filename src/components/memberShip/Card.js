@@ -12,10 +12,10 @@ function Card() {
     console.log(memberTableData);
   return (
     <div>
-         <div className="flex flex-wrap justify-center gap-x-6">
+        <div className="flex flex-wrap justify-center gap-x-6">
               {
                 memberTableData.map((data,i) => 
-                  <div key={i} className="w-[300px] py-6 px-2 rounded-[10px] border-0 sm:border mt-6 ">
+                  <div key={i} className="w-[300px] py-6 px-2 rounded-[10px] border-0 sm:border mt-6 membership-table">
                     <h3 className="tex-base text-text text-center">{data.name}</h3>
                     <h4 className="text-sm text-text-60 text-center mt-1">{data.title}</h4>
                     <h5 className="text-[48px] text-text blog-price font-[900] mt-1 leading-[60px] text-center">${data.price}</h5>
@@ -112,7 +112,7 @@ function Card() {
                   </div>  
                 )
               }
-            </div>
+        </div>
     </div>
   )
 }

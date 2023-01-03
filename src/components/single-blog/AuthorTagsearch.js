@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { FacebookShareButton, LinkedinShareButton, TwitterShareButton } from "react-share";
 
-function AuthorTagsearch() {
+function AuthorTagsearch({author}) {
   return (
     <div>
         {/* <!-- writter bio  --> */}
@@ -10,7 +10,7 @@ function AuthorTagsearch() {
                     <img className="w-1/3 rounded-l-[10px]" src={require(`./../../assests/images/Single-blog/right-content.webp`)} alt=""/>
                     <div className="w-2/3 flex items-center">
                         <div className="pl-2">
-                            <h2 className="text-[24px] sm:text[32px] md:text-[22px] lg:text-[32px] leading-[150%] font-bold pr-[64px] text-white">James Frankline</h2>
+                            <h2 className="text-[24px] sm:text[32px] md:text-[22px] lg:text-[32px] leading-[150%] font-bold pr-[64px] text-white">{author}</h2>
                             <p className="text-sm leading-[21px] text-white/60">Executive, Blogger</p>
                         </div>
                     </div>

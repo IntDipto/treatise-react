@@ -185,6 +185,14 @@ membership page
     display: block;
 }
 
+.membership-table:nth-child(3){
+    @apply bg-primary-20
+}
+.membership-table:nth-child(3) button{
+    @apply bg-primary text-white border-primary;
+}
+
+
 /*=====================
 terms of services page 
  ========================*/

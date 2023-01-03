@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import bg from '../assests/images/Terms-Of-Conditons/banner.webp'
+import { motion } from 'framer-motion';
 
 function TermsOfService() {
     const [activeTab, setActiveTab] = useState('terms');
@@ -35,7 +36,11 @@ function TermsOfService() {
                                     
                                    {
                                     (activeTab === "terms") &&
-                                        <div id="all" className=" tab-content">
+                                        <motion.div id="all" className=" tab-content"
+                                        initial = {{opacity: 0, translateX: 0, translateY: -50}}
+                                        animate = {{opacity: 1, translateX: 0, translateY:0}}
+                                        transition = {{duration: 0.4, delay : 0.2}}
+                                        >
 
                                         <h4 className="text-text text-base sm:text-[24px] font-bold">What information do we collect?</h4>
                                         <p className="mt-6 text-sm sm:text-base text-text-60 font-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consectetur orci eu congue malesuada. Aliquam erat leo, euismod non tellus ac, placerat tincidunt purus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis nibh metus, elementum congue tincidunt vel, elementum quis lectus. Cras placerat, urna ac lobortis tincidunt, massa magna bibendum ipsum, a faucibus neque nibh eu neque. Nam molestie fermentum orci, eu fermentum lacus vestibulum et. <br/> <br/>
@@ -60,12 +65,16 @@ function TermsOfService() {
                                             <button className="px-8 py-3 text-primary font-bold border border-primary text-sm rounded-[10px] w-fit mt-6 sm:mt-0"><a href="#options">Privacy Policy</a></button>
                                         </div>
                                         
-                                        </div>
+                                        </motion.div>
                                    }
 
                                     {
                                         (activeTab === "privacy") &&
-                                        <div id="career_growth" className="tab-content">
+                                        <motion.div id="career_growth" className="tab-content"
+                                        initial = {{opacity: 0, translateX: 0, translateY: -50}}
+                                        animate = {{opacity: 1, translateX: 0, translateY:0}}
+                                        transition = {{duration: 0.4, delay : 0.2}}
+                                        >
 
                                         <h4 className="text-text text-[24px] font-bold">Use of Information</h4>
                                         <p className="mt-6 text-sm sm:text-base text-text-60 font-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consectetur orci eu congue malesuada. Aliquam erat leo, euismod non tellus ac, placerat tincidunt purus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis nibh metus, elementum congue tincidunt vel, elementum quis lectus. Cras placerat, urna ac lobortis tincidunt, massa magna bibendum ipsum, a faucibus neque nibh eu neque. Nam molestie fermentum orci, eu fermentum lacus vestibulum et. <br/> <br/>
@@ -85,12 +94,16 @@ function TermsOfService() {
                                         </div>
                                     
                                         
-                                        </div>
+                                        </motion.div>
                                     }
 
                                    {
                                         (activeTab === "payment") &&
-                                        <div id="process" className="tab-content">
+                                        <motion.div id="process" className="tab-content"
+                                        initial = {{opacity: 0, translateX: 0, translateY: -50}}
+                                        animate = {{opacity: 1, translateX: 0, translateY:0}}
+                                        transition = {{duration: 0.4, delay : 0.2}}
+                                        >
 
                                         <h4 className="text-text text-[24px] font-bold">Use of Information</h4>
                                         <p className="mt-6 text-sm sm:text-base text-text-60 font-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consectetur orci eu congue malesuada. Aliquam erat leo, euismod non tellus ac, placerat tincidunt purus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis nibh metus, elementum congue tincidunt vel, elementum quis lectus. Cras placerat, urna ac lobortis tincidunt, massa magna bibendum ipsum, a faucibus neque nibh eu neque. Nam molestie fermentum orci, eu fermentum lacus vestibulum et. <br/> <br/>
@@ -114,7 +127,7 @@ function TermsOfService() {
                                             <button className="px-5 py-3 text-primary font-bold border border-primary text-sm rounded-[10px]">Privacy Policy</button>
                                         </div>
 
-                                        </div>
+                                        </motion.div>
                                    }
                                 </div>
                                 

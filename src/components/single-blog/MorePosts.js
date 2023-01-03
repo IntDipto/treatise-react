@@ -25,51 +25,6 @@ function MorePosts({allStories}) {
                 </div>    
             )
         }
-        {/* <div className="border rounded-[10px] "> 
-            <img className="w-full rounded-t-[10px]" src="../assets/images/Single-blog/s-blog2.png" alt="" srcSet=""/>
-            <div className="p-4">
-                <p className="flex gap-x-2 text-sm">
-                    <span className="text-primay">#Career & Growth</span>
-                    <span className="text-text">|</span>
-                    <span className="text-text-60">22 June, 2022</span>
-                </p>
-                <p className="text-[18px] text-text font-bold mt-4">10 things nobody told your about Being a web designer!</p>
-                <p className="flex justify-between text-sm mt-4">
-                    <span className="text-text">by James Frankline</span>
-                    <span className="text-text-60">5 mins to read</span>
-                </p>
-            </div>
-        </div>
-        <div className="border rounded-[10px] "> 
-            <img className="w-full rounded-t-[10px]" src="../assets/images/Single-blog/s-blog3.png" alt="" srcSet=""/>
-            <div className="p-4">
-                <p className="flex gap-x-2 text-sm">
-                    <span className="text-primay">#Career & Growth</span>
-                    <span className="text-text">|</span>
-                    <span className="text-text-60">22 June, 2022</span>
-                </p>
-                <p className="text-[18px] text-text font-bold mt-4">10 things nobody told your about Being a web designer!</p>
-                <p className="flex justify-between text-sm mt-4">
-                    <span className="text-text">by James Frankline</span>
-                    <span className="text-text-60">5 mins to read</span>
-                </p>
-            </div>
-        </div>
-        <div className="border rounded-[10px] "> 
-            <img className="w-full rounded-t-[10px]" src="../assets/images/Single-blog/s-blog4.png" alt="" srcSet=""/>
-            <div className="p-4">
-                <p className="flex gap-x-2 text-sm">
-                    <span className="text-primay">#Career & Growth</span>
-                    <span className="text-text">|</span>
-                    <span className="text-text-60">22 June, 2022</span>
-                </p>
-                <p className="text-[18px] text-text font-bold mt-4">10 things nobody told your about Being a web designer!</p>
-                <p className="flex justify-between text-sm mt-4">
-                    <span className="text-text">by James Frankline</span>
-                    <span className="text-text-60">5 mins to read</span>
-                </p>
-            </div>
-        </div> */}
     </div>
   )
 }

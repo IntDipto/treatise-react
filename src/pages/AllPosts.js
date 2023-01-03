@@ -132,18 +132,6 @@ function AllPosts() {
                         <div className="relative">
                             
                             <input id="flatpickr" className="w-full md:w-[480px] bg-[#F8F8F8] px-[18px] py-3 outline-none rounded-[8px] border-2 placeholder:text-text-40" type="date" placeholder="All Time"/>
-                            {/* <span className="absolute right-4 top-1/2 -translate-y-1/2">
-                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g opacity="0.4">
-                                    <path d="M19.5 4.25H4.5C4.08579 4.25 3.75 4.58579 3.75 5V20C3.75 20.4142 4.08579 20.75 4.5 20.75H19.5C19.9142 20.75 20.25 20.4142 20.25 20V5C20.25 4.58579 19.9142 4.25 19.5 4.25Z" stroke="#060B25" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                    <path d="M16.5 2.75V5.75" stroke="#060B25" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                    <path d="M7.5 2.75V5.75" stroke="#060B25" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                    <path d="M3.75 8.75H20.25" stroke="#060B25" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                    <path d="M14.625 14.75H9.375" stroke="#060B25" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                    <path d="M12 12.125V17.375" stroke="#060B25" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                    </g>
-                                </svg>
-                            </span> */}
                         </div>
                     </div>
 

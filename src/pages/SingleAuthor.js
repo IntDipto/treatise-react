@@ -14,9 +14,8 @@ function SingleAuthor() {
         })
     },[])
 
-    // console.log(authors);
     const author = authors.find(author => author.id === id)
-    console.log(author?.Post);
+    // console.log(author?.Post);
   return (
     <div className='mt-[170px]'>
          {/* <!-- author info --> */}
