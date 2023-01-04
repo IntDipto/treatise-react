@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 
 function Table() {
     const [memberTableData, setMemberTableData] = useState([]);
@@ -24,7 +25,7 @@ function Table() {
                 
                     <p className="text-[48px] text-bold text-text mt-2 sm:mt-5 md:mt-12">$0</p>
                     <div className="flex justify-center mt-1">
-                        <button className="text-sm text-primary px-10 py-2 border border-primary rounded-[10px] whitespace-nowrap">Start Now</button>
+                        <Link to='/subscribe-membership'> <button className="text-sm text-primary px-10 py-2 border border-primary rounded-[10px] whitespace-nowrap">Start Now</button></Link>
                     </div>
                 </th>
 
@@ -34,7 +35,7 @@ function Table() {
                 
                     <p className="text-[48px] text-bold text-text mt-2 m:mt-5 md:mt-12">$49</p>
                     <div className="flex justify-center mt-1">
-                        <button className="text-sm text-primary px-10 py-2 border border-primary rounded-[10px] whitespace-nowrap">Start Now</button>
+                        <Link to='/subscribe-membership'><button className="text-sm text-primary px-10 py-2 border border-primary rounded-[10px] whitespace-nowrap">Start Now</button></Link>
                     </div>
                 </th>
 
@@ -44,7 +45,7 @@ function Table() {
                 
                     <p className="text-[48px] text-bold text-text mt-2 m:mt-5 md:mt-12">$99</p>
                     <div className="flex justify-center mt-1">
-                        <button className="text-sm text-primary px-10 py-2 border border-primary rounded-[10px] whitespace-nowrap">Start Now</button>
+                       <Link to='/subscribe-membership'> <button className="text-sm text-primary px-10 py-2 border border-primary rounded-[10px] whitespace-nowrap">Start Now</button></Link>
                     </div>
                 </th>
 
@@ -54,7 +55,7 @@ function Table() {
                 
                     <p className="text-[48px] text-bold text-text mt-2 m:mt-5 md:mt-12">$499</p>
                     <div className="flex justify-center mt-1">
-                        <button className="text-sm text-white bg-blue-900 px-10 py-2 border rounded-[10px] whitespace-nowrap">Start Now</button>
+                        <Link to='/subscribe-membership'><button className="text-sm text-white bg-blue-900 px-10 py-2 border rounded-[10px] whitespace-nowrap">Start Now</button></Link>
                     </div>
                 </th>
                 
@@ -64,7 +65,7 @@ function Table() {
                 
                     <p className="text-[48px] text-bold text-text mt-2 m:mt-5 md:mt-12">$999</p>
                     <div className="flex justify-center mt-1">
-                        <button className="text-sm text-primary px-10 py-2 border border-primary rounded-[10px] whitespace-nowrap">Start Now</button>
+                        <Link to='/subscribe-membership'><button className="text-sm text-primary px-10 py-2 border border-primary rounded-[10px] whitespace-nowrap">Start Now</button></Link>
                     </div>
                 </th>
             </tr>

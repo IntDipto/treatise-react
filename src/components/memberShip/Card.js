@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 
 function Card() {
     const [memberTableData, setMemberTableData] = useState([]);
@@ -106,7 +107,7 @@ function Card() {
                         </p>
 
                         <div className="flex justify-center mt-6">
-                            <button className="text-text text-sm px-10 py-3 border border-text rounded-[7px]">Start Now</button>
+                            <Link to='/subscribe-membership'><button className="text-text text-sm px-10 py-3 border border-text rounded-[7px]">Start Now</button></Link>
                         </div>
                     </div>
                   </div>  
