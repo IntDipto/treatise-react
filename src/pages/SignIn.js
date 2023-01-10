@@ -1,8 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import bg from '../assests/images/bg.webp'
+import useTitleHook from '../Hooks/useTitleHook'
 
 function SignIn() {
+    useTitleHook('Sign In')
   return (
     <div className=''>
         <div style={{"backgroundImage":`url(${bg})`}} className="h-screen">

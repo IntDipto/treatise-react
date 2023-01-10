@@ -1,7 +1,9 @@
 import React from 'react'
 import bg from '../assests/images/bg.webp'
+import useTitleHook from '../Hooks/useTitleHook'
 
 function SubscribeMemberShip() {
+    useTitleHook('Subscribe Membership')
   return (
     <div style={{"backgroundImage":`url(${bg})`}} className="h-screen">
        <div className="flex justify-center py-[80px] sm:py-[160px] h-full w-full ">

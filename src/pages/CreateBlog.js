@@ -6,8 +6,10 @@ import DOMPurify from "dompurify";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import bg from '../assests/images/Author-Profile/author-profile.webp'
 import avatar from '../assests/images/Author-Profile/avatar.webp'
+import useTitleHook from '../Hooks/useTitleHook';
 
 function CreateBlog() {
+    useTitleHook('Create Blog')
     const [editorState, setEditorState] = useState(() =>
     EditorState.createEmpty()
   );

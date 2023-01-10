@@ -54,7 +54,7 @@ function AllPost() {
                             animate = {{opacity: 1, translateX: 0, translateY:0}}
                             transition = {{duration: 0.4, delay : i * 0.2}}
                             >
-                                <Link>
+                                <Link to={`/blog/${post.id}`}>
                                     <div className="border rounded-[10px] h-fit">
                                         <img className="w-full" src={require(`./../../assests/images/home/all-posts/${post.img}.webp`)} alt=""/>
                                         <div className="p-4">

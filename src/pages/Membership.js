@@ -2,9 +2,10 @@ import React from 'react'
 import Card from '../components/memberShip/Card'
 import FAQ from '../components/memberShip/FAQ'
 import Table from '../components/memberShip/Table'
+import useTitleHook from '../Hooks/useTitleHook'
 
 function Membership() {
-
+  useTitleHook('Membership')
   
 
   return (

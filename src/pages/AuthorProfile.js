@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react'
 import bg from '../assests/images/Author-Profile/author-profile.webp'
 import avater from '../assests/images/Author-Profile/avatar.webp'
@@ -8,11 +8,23 @@ import Draft from '../components/author-profile/Draft'
 import Published from '../components/author-profile/Published'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import useTitleHook from '../Hooks/useTitleHook'
+import Loader from '../components/shared-components/loader/Loader'
 
 function AuthorProfile() {
     const [activebtn , setActiveBtn] = useState("profile");
+    useTitleHook('About You')
+
+    const [isLoading, setIsLoading] = useState(true)
+
+    useEffect(() => {
+        setTimeout(() => {
+        setIsLoading(false)
+        }, 1500);
+    }, [])
 
   return (
+    isLoading ? <Loader></Loader> :
     <div className='mt-[56px] sm:mt-[87px]'>
         {/* <!-- banner and name details  --> */}
         <div className="banner-name">

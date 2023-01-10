@@ -5,18 +5,29 @@ import {motion} from 'framer-motion'
 import bg from './../assests/images/All-blog/all-blog-banner.webp'
 import { Link } from 'react-router-dom'
 import ReactPaginate from 'react-paginate';
+import useTitleHook from '../Hooks/useTitleHook'
+import Loader from '../components/shared-components/loader/Loader'
 
 function AllPosts() {
     const [showingFilter , setShowingFilter] = useState(false)
     const [posts, setPosts] = useState([])
     const [filterProduct , setFilterProduct] = useState([])
     const [activebtn, setActiveBtn] = useState('all');
+    useTitleHook('All Posts')
+
+    const [isLoading, setIsLoading] = useState(true)
+
+    useEffect(() => {
+        setTimeout(() => {
+        setIsLoading(false)
+        }, 1500);
+    }, [])
 
     useEffect(()=>{
         fetch("./data/all-post/allPost.json")
         .then(res => res.json())
         .then(data => {
-            console.log(data);
+            // console.log(data);
             setPosts(data)
             setFilterProduct(data)
         })
@@ -37,7 +48,7 @@ function AllPosts() {
     const itemsPerPage = 8; 
     const [itemOffset, setItemOffset] = useState(0);
     const endOffset = itemOffset + itemsPerPage;
-    console.log(`Loading items from ${itemOffset} to ${endOffset}`);
+    // console.log(`Loading items from ${itemOffset} to ${endOffset}`);
     const currentItems = filterProduct.slice(itemOffset, endOffset);
     const pageCount = Math.ceil(filterProduct.length / itemsPerPage);
 
@@ -45,9 +56,13 @@ function AllPosts() {
     const handlePageClick = (event) => {
     const newOffset = (event.selected * itemsPerPage) % filterProduct.length;
     setItemOffset(newOffset);
+
+
+    
     };
     
   return (
+   isLoading ? <Loader></Loader> :
     <div className='mt-[56px] sm:mt-[87px]'>
 
         {/* <!-- banner part  --> */}
@@ -139,9 +154,9 @@ function AllPosts() {
                         </div>
                     </div>
 
-                   <div className="w-full 2xl:w-fit flex justify-center mt-4 2xl:mt-0">
+                    <div className="w-full 2xl:w-fit flex justify-center mt-4 2xl:mt-0">
                         <button className="w-[283px] py-[13.5px] bg-text-10 rounded-[5px] text-text-40">Clear</button>
-                   </div>
+                    </div>
                 </div>
             </div>
             }
@@ -153,12 +168,12 @@ function AllPosts() {
                 <Masonry> 
                     {
                         currentItems?.map((post,i) =>
-                            <motion.div key={post.id} className="items Product m-[10px]"
+                            <motion.div key={i} className="items Product m-[10px]"
                             initial = {{opacity: 0, translateX: -50, translateY: -50}}
                             animate = {{opacity: 1, translateX: 0, translateY:0}}
                             transition = {{duration: 0.4, delay : i * 0.2}}
                             >
-                                <Link>
+                                <Link to={`/blog/${post.id}`}>
                                     <div className="border rounded-[10px] h-fit">
                                         <img className="w-full rounded-t-[10px]" src={require(`../assests/images/All-blog/${post?.img}.webp`)} alt=""/>
                                         <div className="p-4">

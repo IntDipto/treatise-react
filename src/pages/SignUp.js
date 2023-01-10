@@ -1,8 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import bg from '../assests/images/bg.webp'
+import useTitleHook from '../Hooks/useTitleHook'
 
 function SignUp() {
+    useTitleHook('Sign Up')
   return (
     <div  style={{"backgroundImage":`url(${bg})`}} className="h-full ">
         <div className="flex justify-center py-[80px] sm:py-[160px] h-full">

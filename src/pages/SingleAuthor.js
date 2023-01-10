@@ -1,9 +1,11 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import Subscribe from '../components/home/Subscribe'
+import useTitleHook from '../Hooks/useTitleHook'
 
 function SingleAuthor() {
+    useTitleHook('Author Details')
     const {id} = useParams()
 
     const [authors, allsetAuthor] = useState([])
@@ -15,7 +17,6 @@ function SingleAuthor() {
     },[])
 
     const author = authors.find(author => author.id === id)
-    // console.log(author?.Post);
   return (
     <div className='mt-[170px]'>
          {/* <!-- author info --> */}
@@ -62,21 +63,23 @@ function SingleAuthor() {
             <div className="mt-10 mb-7 flex gap-6 justify-center flex-wrap">
                 {
                     author?.Post.map(post =>
-                        <div key={post.id} className="border rounded-[10px] w-[440px]">
-                            <img className="rounded-t-[10px] w-full" src={require(`../assests/images/AuthorPost/${post.img}.webp`)} alt="" srcSet=""/>
-                            <div className="p-4">
-                                <p className="flex text-xs md:text-sm justify-between md:justify-start md:gap-x-2">
-                                    <span className="text-primary">#Career & Growth</span>
-                                    <span className="text-text hidden md:block">|</span>
-                                    <span className="text-text-60">22 June, 2022</span>
-                                </p>
-                                <p className="text-[18px] text-text font-bold mt-4 text-base">10 things nobody told your about Being a web designer!</p>
-                                <p className="flex justify-between text-sm mt-4">
-                                    <span className="text-text">by James Frankline</span>
-                                    <span className="text-text-60">5 mins to read</span>
-                                </p>
+                        <Link to={`/blog/${post.id}`}>
+                            <div key={post.id} className="border rounded-[10px] w-[440px]">
+                                <img className="rounded-t-[10px] w-full" src={require(`../assests/images/AuthorPost/${post.img}.webp`)} alt="" srcSet=""/>
+                                <div className="p-4">
+                                    <p className="flex text-xs md:text-sm justify-between md:justify-start md:gap-x-2">
+                                        <span className="text-primary">#Career & Growth</span>
+                                        <span className="text-text hidden md:block">|</span>
+                                        <span className="text-text-60">22 June, 2022</span>
+                                    </p>
+                                    <p className="text-[18px] text-text font-bold mt-4 text-base">10 things nobody told your about Being a web designer!</p>
+                                    <p className="flex justify-between text-sm mt-4">
+                                        <span className="text-text">by James Frankline</span>
+                                        <span className="text-text-60">5 mins to read</span>
+                                    </p>
+                                </div>
                             </div>
-                        </div>
+                        </Link>
                     )
                 }
             </div>

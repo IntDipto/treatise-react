@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import bg from '../assests/images/Terms-Of-Conditons/banner.webp'
 import { motion } from 'framer-motion';
+import useTitleHook from '../Hooks/useTitleHook';
 
 function TermsOfService() {
+    useTitleHook('Terms of Services')
     const [activeTab, setActiveTab] = useState('terms');
     const handleTabClick = e =>{
         setActiveTab(e)

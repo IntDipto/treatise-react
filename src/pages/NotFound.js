@@ -1,7 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import useTitleHook from '../Hooks/useTitleHook'
 
 function NotFound() {
+  useTitleHook('Page Not Found')
   return (
     <div className="mt-[196px] sm:mt-[214px]">
         <div className="flex justify-center items-center mx-[5%]">
